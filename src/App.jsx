@@ -1,23 +1,15 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
-
-import Home from "./pages/home/Home"
-import Room from "./pages/room/Room";
-
-
+import Navbar from "./components/navbar/Navbar"
+import Footer from "./components/footer/Footer"
+import Removalbackground from "./components/removalBackground/Removalbackground"
 
 const App = () => {
   return (
     <div>
-      <Router>
-        <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/room/:roomId" element={<Room/>} />
-        </Routes>
-      </Router>
+      <Navbar/>
+      <div className='h-screen'>
+      <Removalbackground/>
+      </div>
+      <Footer/>
     </div>
   )
 }
